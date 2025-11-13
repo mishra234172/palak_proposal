@@ -83,18 +83,6 @@
 
 <button class="proposal-btn" onclick="propose()">💍 Will You Marry Me? 💍</button>
 
-<script>
-function propose() {
-    alert("I love you ❤️ Will you marry me? 💖");
-}
-</script>
-
-<footer>
-    <p>Made with ❤️ for you</p>
-</footer>
-
-<button onclick="propose()">💍 Will You Marry Me? 💍</button>
-
 <audio id="loveSong">
   <source src="{{ url_for('static', filename='music/romantic.mp3') }}" type="audio/mpeg">
 </audio>
@@ -104,8 +92,11 @@ function propose() {
 <script>
 function playMusicAndPropose() {
     var song = document.getElementById("loveSong");
-    song.play();
+    song.play(); // This will work because it’s triggered by a user click
     alert("I love you ❤️ Will you marry me? 💖");
+
+    // Optional: add confetti
+    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
 }
 </script>
 
