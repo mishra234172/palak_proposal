@@ -2,40 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>For You ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Special Proposal</title>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            color: white;
+            font-family: Arial, sans-serif;
             text-align: center;
-            padding-top: 100px;
+            background-color: #fff0f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
-        h1 { font-size: 3em; }
-        h2 { margin-top: 20px; }
-        button {
-            margin-top: 40px;
-            padding: 15px 40px;
-            font-size: 1.2em;
-            background-color: white;
-            color: #ff4b69;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        button:hover {
-            background-color: #ff4b69;
+        header {
+            padding: 20px;
+            background-color: #ffb6c1;
             color: white;
+        }
+        h1 {
+            margin: 0;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .gallery img {
+            margin: 10px;
+            border-radius: 15px;
+            width: 250px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .proposal-btn {
+            margin: 30px;
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .proposal-btn:hover {
+            transform: scale(1.1);
+            background-color: #ff1493;
+        }
+        footer {
+            padding: 15px;
+            background-color: #ffb6c1;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <h1>Hi Palak ❤️</h1>
-    <h2>Every day with you feels like a dream.</h2>
-    <h2>And today I want to make it forever...</h2>
-    <button onclick="alert('💍 Will you marry me, Palak? 💖')">
-        Click Me 💌
-    </button>
+
+<header>
+    <h1>💖 Our Special Proposal 💖</h1>
+    <p>Sharing our favorite memories together</p>
+</header>
+
+<div class="gallery">
+    <img src="{{ url_for('static', filename='images/palak1.jpg') }}" alt="Pic 1" width="300">
+    <img src="{{ url_for('static', filename='images/palak2.jpg') }}" alt="Pic 2" width="300">
+    <img src="{{ url_for('static', filename='images/palak3.jpg') }}" alt="Pic 3" width="300">
+
+</div>
+
+<button class="proposal-btn" onclick="propose()">💍 Will You Marry Me? 💍</button>
+
+<script>
+function propose() {
+    alert("I love you ❤️ Will you marry me? 💖");
+}
+</script>
+
+<footer>
+    <p>Made with ❤️ for you</p>
+</footer>
+
 </body>
 </html>
