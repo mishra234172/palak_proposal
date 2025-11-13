@@ -93,5 +93,33 @@ function propose() {
     <p>Made with ❤️ for you</p>
 </footer>
 
+<button onclick="propose()">💍 Will You Marry Me? 💍</button>
+
+<script>
+function propose() {
+    alert("I love you ❤️ Will you marry me? 💖");
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+function propose() {
+    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+    alert("I love you ❤️ Will you marry me? 💖");
+}
+</script>
+
+<img id="slideshow" src="{{ url_for('static', filename='images/pic1.jpg') }}" width="300">
+
+<script>
+let pics = ["pic1.jpg","pic2.jpg","pic3.jpg"];
+let i = 0;
+setInterval(()=> {
+    i = (i+1) % pics.length;
+    document.getElementById('slideshow').src = "{{ url_for('static', filename='images/') }}" + pics[i];
+}, 3000);
+</script>
+
+
 </body>
 </html>
