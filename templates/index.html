@@ -109,7 +109,7 @@ function propose() {
 }
 </script>
 
-<img id="slideshow" src="{{ url_for('static', filename='images/pic1.jpg') }}" width="300">
+<img id="slideshow" src="{{ url_for('static', filename='images/palak1.jpg') }}" width="300">
 
 <script>
 let pics = ["palak1.jpg","palak3.jpg","palak6.jpg"];
@@ -119,9 +119,10 @@ setInterval(()=> {
     document.getElementById('slideshow').src = "{{ url_for('static', filename='images/') }}" + pics[i];
 }, 3000);
 </script>
-<audio autoplay loop>
-  <source src="{{ url_for('static', filename='C:\Users\USER\Desktop\proposal_website\static\music') }}" type="audio/mpeg">
+<audio id="loveSong" autoplay loop>
+  <source src="{{ url_for('static', filename='music/romantic.mp3') }}" type="audio/mpeg">
 </audio>
+
 
 
 
