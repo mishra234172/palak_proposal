@@ -40,12 +40,12 @@
         }
         .proposal-btn {
             margin: 30px;
-            padding: 20px 40px;
+            padding: 20px 60px;
             font-size: 24px;
             background-color: #ff69b4;
-            color: white;
+            color: red;
             border: none;
-            border-radius: 15px;
+            border-radius: 25px;
             cursor: pointer;
             transition: transform 0.2s, background-color 0.2s;
         }
@@ -81,8 +81,6 @@
     <p>❤️ I love you every single day, more than words can say. ❤️</p>
 </div>
 
-<button class="proposal-btn" onclick="propose()">💍 Will You Marry Me? 💍</button>
-
 <audio id="loveSong">
   <source src="{{ url_for('static', filename='music/romantic.mp3') }}" type="audio/mpeg">
 </audio>
@@ -99,9 +97,6 @@ function playMusicAndPropose() {
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
 }
 </script>
-
-
-<img id="slideshow" src="{{ url_for('static', filename='images/palak1.jpg') }}" width="300">
 
 <script>
 let pics = ["palak1.jpg","palak3.jpg","palak6.jpg"];
