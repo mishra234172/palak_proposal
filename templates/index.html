@@ -95,19 +95,20 @@ function propose() {
 
 <button onclick="propose()">💍 Will You Marry Me? 💍</button>
 
+<audio id="loveSong">
+  <source src="{{ url_for('static', filename='music/romantic.mp3') }}" type="audio/mpeg">
+</audio>
+
+<button onclick="playMusicAndPropose()">💍 Will You Marry Me? 💍</button>
+
 <script>
-function propose() {
+function playMusicAndPropose() {
+    var song = document.getElementById("loveSong");
+    song.play();
     alert("I love you ❤️ Will you marry me? 💖");
 }
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-<script>
-function propose() {
-    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
-    alert("I love you ❤️ Will you marry me? 💖");
-}
-</script>
 
 <img id="slideshow" src="{{ url_for('static', filename='images/palak1.jpg') }}" width="300">
 
@@ -119,9 +120,7 @@ setInterval(()=> {
     document.getElementById('slideshow').src = "{{ url_for('static', filename='images/') }}" + pics[i];
 }, 3000);
 </script>
-<audio id="loveSong" autoplay loop>
-  <source src="{{ url_for('static', filename='music/romantic.mp3') }}" type="audio/mpeg">
-</audio>
+
 
 
 
